@@ -1,0 +1,52 @@
+{% extends 'portfolios/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'portfolios/index.css' %}">
+</head>
+
+<main>
+    <section class="about_me">
+        <div class="hero__img__mobile">
+            <img src="{% static 'portfolios/images/pexels-deepu-b-iyer-2857477.jpg' %}" alt="">
+        </div>
+        <div class="heading">
+            <h2>Hey, I'm Salman Gawhar and I love building beautiful websites</h2>
+            <button><img src="{% static 'portfolios/images/double_down_arrow.svg' %}" alt="">
+                <p>ABOUT ME</p>
+            </button>
+        </div>
+    </section>
+    <section class="about_me_details">
+        <img src="{% static 'portfolios/images/pexels-bhupendra-singh-756024.jpg' %}" alt="avatar">
+        <div class="about_me_details_summary">
+            <hr>
+            <div>
+                <h3>About Me</h3>
+                <p>I'm a junior front-end developer looking for a new role in an exciting company. I focus on writing
+                    accessible
+                    HTML, using modern CSS practices and writing clean javascript. When writing javascript code, I
+                    mostly use
+                    React, but I can adapt to whatever tools are required. I'm based in Ranchi, India, but I'm happy
+                    working
+                    remotely. When I'm not coding, you'll find me outdoors. I love being out in nature whether that's
+                    going for
+                    a
+                    walk, run or cycling. I'd love you to check out my work.
+                </p>
+            </div>
+            <div>
+                <button><a href="">GO PORTFOLIO</a></button>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <section class="contact_me">
+        <h4>Interested in doing a project together?</h4>
+        <hr>
+        <button><a href="">CONTACT ME</a></button>
+    </section>
+</main>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'portfolios/base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'portfolios/portfolio.css' %}">
+</head>
+<main class="blog_container">
+    <h1 class="blog_title">{{portfolio.title}}</h1>
+    <p class="published_date_blog">{{portfolio.date_added}}</p>
+    <p class="blog_summaray">{{portfolio.summary}}</p>
+    <img src="../..//static/portfolios/images/{{ portfolio.title }}.jpg" alt="hero image">
+    <p class="blog_text">{{portfolio.text}}</p>
+    <div class="button_wrapper">
+        <a href="#"><button>Code</button></a>
+        <a href="#"><button>Live site</button></a>
+    </div>
+</main>
+
+{% endblock content %}
