@@ -1,65 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolios</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolios/base.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolios/base.css' %}" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
     <script src="{% static 'portfolios/base.js' %}" async></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="topnav">
-        <div>
-            <img src="{% static 'portfolios/images/triangle_up.png' %}" alt="" width="28" height="28">
-            <img src="{% static 'portfolios/images/triangle_down.png' %}" alt="" width="28" height="28">
-        </div>
+      <div>
+        <img
+          src="{% static 'portfolios/images/triangle_up.png' %}"
+          alt=""
+          width="28"
+          height="28"
+        />
+        <img
+          src="{% static 'portfolios/images/triangle_down.png' %}"
+          alt=""
+          width="28"
+          height="28"
+        />
+      </div>
 
-        <nav>
-            <button id="btnOpen" class="topnav__open" aria-expanded="false" aria-labelledby="nav-label">
-                <img src="{% static 'portfolios/images/menu.svg' %}" alt="">
-            </button>
-            <div id="topNavMenu" class="topnav__menu" role="dialog" aria-labelledby="nav-label">
-                <button id="btnClose" class="topnav__close" aria-label="close">
-                    <img src="{% static 'portfolios/images/close.svg' %}" alt="">
-                </button>
-                <ul class="topnav__links">
-                    <li class="topnav__item"><a href="{% url 'portfolios:index' %}" class="topnav__link">HOME</a></li>
-                    <li class="topnav__item"><a href="{% url 'portfolios:portfolios' %}"
-                            class="topnav__link">PORTFOLIO</a></li>
-                    <li class="topnav__item"><a href="#" class="topnav__link">CONTACT ME</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <button
+          id="btnOpen"
+          class="topnav__open"
+          aria-expanded="false"
+          aria-labelledby="nav-label"
+        >
+          <img src="{% static 'portfolios/images/menu.svg' %}" alt="" />
+        </button>
+        <div
+          id="topNavMenu"
+          class="topnav__menu"
+          role="dialog"
+          aria-labelledby="nav-label"
+        >
+          <button id="btnClose" class="topnav__close" aria-label="close">
+            <img src="{% static 'portfolios/images/close.svg' %}" alt="" />
+          </button>
+          <ul class="topnav__links">
+            <li class="topnav__item">
+              <a href="{% url 'portfolios:index' %}" class="topnav__link"
+                >HOME</a
+              >
+            </li>
+            <li class="topnav__item">
+              <a href="{% url 'portfolios:portfolios' %}" class="topnav__link"
+                >PORTFOLIO</a
+              >
+            </li>
+            <li class="topnav__item">
+              <a href="#" class="topnav__link">CONTACT ME</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     {% block content %}{% endblock content %}
     <footer>
-        <div class="bottom__nav">
-            <div class="bottom__nav__left">
-                <div>
-                    <img src="{% static 'portfolios/images/triangle_up_white.png' %}" alt="">
-                    <img src="{% static 'portfolios/images/triangle_down_white.png' %}" alt="">
-                </div>
-                <ul class="bottom__nav__links">
-                    <li class="bottom__nav_item"><a class="bottom__nav__link"
-                            href="{% url 'portfolios:index' %}">HOME</a></li>
-                    <li class="bottom__nav_item"><a class="bottom__nav__link"
-                            href="{% url 'portfolios:portfolios' %}">PORTFOLIO</a></li>
-                    <li class="bottom__nav_item"><a class="bottom__nav__link" href="#">CONTACT ME</a></li>
-                </ul>
-            </div>
-            <div class="bottom__nav__right">
-                <img src="{% static 'portfolios/images/github.svg' %}" alt="">
-                <img src="{% static 'portfolios/images/x-twitter.svg' %}" alt="">
-                <img src="{% static 'portfolios/images/linkedin.svg' %}" alt="">
-            </div>
+      <div class="bottom__nav">
+        <div class="bottom__nav__left">
+          <div>
+            <img
+              src="{% static 'portfolios/images/triangle_up_white.png' %}"
+              alt=""
+            />
+            <img
+              src="{% static 'portfolios/images/triangle_down_white.png' %}"
+              alt=""
+            />
+          </div>
+          <ul class="bottom__nav__links">
+            <li class="bottom__nav_item">
+              <a class="bottom__nav__link" href="{% url 'portfolios:index' %}"
+                >HOME</a
+              >
+            </li>
+            <li class="bottom__nav_item">
+              <a
+                class="bottom__nav__link"
+                href="{% url 'portfolios:portfolios' %}"
+                >PORTFOLIO</a
+              >
+            </li>
+            <li class="bottom__nav_item">
+              <a class="bottom__nav__link" href="#">CONTACT ME</a>
+            </li>
+          </ul>
         </div>
-        <div class="copyright">
-            <p>&copy;Designed and coded by salman gawhar,2024</p>
+        <div class="bottom__nav__right">
+          <img src="{% static 'portfolios/images/github.svg' %}" alt="" />
+          <img src="{% static 'portfolios/images/x-twitter.svg' %}" alt="" />
+          <img src="{% static 'portfolios/images/linkedin.svg' %}" alt="" />
         </div>
+      </div>
+      <div class="copyright">
+        <p>&copy;Designed and coded by salman gawhar,2024</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
