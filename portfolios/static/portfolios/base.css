@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   /* font-family: 'Inter Display'; */
   /* background-color: var(--main-background-color); */
-  font-family: "Roboto", system-ui;
+  font-family: var(--font-sans);
 }
 
 .topnav {
