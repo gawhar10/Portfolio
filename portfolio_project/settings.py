@@ -121,6 +121,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # The absolute filesystem path to the directory where collectstatic will collect static files for deployment
+import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
