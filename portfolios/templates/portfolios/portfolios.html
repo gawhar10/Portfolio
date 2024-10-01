@@ -1,32 +1,37 @@
-{% extends 'portfolios/base.html' %}
-{% block content %}
-{% load static %}
+{% extends 'portfolios/base.html' %} {% block content %} {% load static %}
 
 <head>
-    <link rel="stylesheet" href="{% static 'portfolios/portfolios.css' %}">
+  <link rel="stylesheet" href="{% static 'portfolios/portfolios.css' %}" />
 </head>
 <main>
-    {% for portfolio in portfolios %}
-    <section>
-        <div class="image_wrapper">
-            <img src="../.././static/portfolios/images/{{ portfolio.title }}.jpg" alt="topic image">
-            <div class="button_wrapper">
-                <button>HTML</button>
-                <button>CSS</button>
-                <button>JS</button>
-            </div>
-        </div>
-        <div class="text_wrapper">
-            <p class="published_date">{{ portfolio.date_added }}</p>
-            <h1 class="topic_name">
-                <a class="topic_link" href="{% url 'portfolios:portfolio' portfolio.id %}">{{ portfolio.title }}</a>
-            </h1>
-            <p class="summary">{{ portfolio.summary }}</p>
-        </div>
-    </section>
-    <hr>
-    {% empty %}
-    <p>No item found.</p>
-    {% endfor %}
+  {% for portfolio in portfolios %}
+  <section>
+    <div class="image_wrapper">
+      <img
+        src="../.././static/portfolios/images/{{ portfolio.title }}.png"
+        alt="topic image"
+      />
+      <div class="button_wrapper">
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JS</button>
+      </div>
+    </div>
+    <div class="text_wrapper">
+      <p class="published_date">{{ portfolio.date_added }}</p>
+      <h1 class="topic_name">
+        <a
+          class="topic_link"
+          href="{% url 'portfolios:portfolio' portfolio.id %}"
+          >{{ portfolio.title }}</a
+        >
+      </h1>
+      <p class="summary">{{ portfolio.summary }}</p>
+    </div>
+  </section>
+  <hr />
+  {% empty %}
+  <p>No item found.</p>
+  {% endfor %}
 </main>
 {% endblock content %}
