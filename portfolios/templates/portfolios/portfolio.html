@@ -13,8 +13,18 @@
   />
   <p class="blog_text">{{portfolio.text}}</p>
   <div class="button_wrapper">
-    <a href="#"><button>Code</button></a>
-    <a href="#"><button>Live site</button></a>
+    <a
+      href="{{ portfolio.source_code_url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><button>Code</button></a
+    >
+    <a
+      href="{{ portfolio.live_site_url }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><button>Live site</button></a
+    >
   </div>
 </main>
 

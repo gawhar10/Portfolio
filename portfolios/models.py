@@ -6,6 +6,8 @@ class Portfolio(models.Model):
     title = models.CharField(max_length=200)
     summary = models.CharField(max_length=400)
     text = models.TextField()
+    source_code_url = models.CharField(max_length=400)
+    live_site_url = models.CharField(max_length=400)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
